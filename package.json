@@ -1,0 +1,21 @@
+{
+  "name": "matrix-poweredup",
+  "version": "0.0.1",
+  "description": "A Matrix Bot for connecting to LEGO PoweredUp devices.",
+  "main": "lib/app.js",
+  "author": "Half-Shot <halfy@half-shot.uk>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node lib/app.js",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "node-poweredup": "^6.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "typescript": "^4.3.5"
+  }
+}
