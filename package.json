@@ -12,6 +12,8 @@
     "prepare": "npm run build"
   },
   "dependencies": {
+    "matrix-bot-sdk": "^0.5.19",
+    "matrix-js-sdk": "^12.2.0",
     "node-poweredup": "^6.11.0"
   },
   "devDependencies": {

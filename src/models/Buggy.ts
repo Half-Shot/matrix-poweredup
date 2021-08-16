@@ -12,7 +12,7 @@ interface BuggyDevices {
     led: LEGO.HubLED;
 }
 
-const MAX_ANGLE = 30;
+export const MAX_ANGLE = 30;
 
 export class Buggy {
 
@@ -53,9 +53,15 @@ export class Buggy {
         this.currentSteerAngle += Math.max(-MAX_ANGLE, Math.min(degrees + multiplier, MAX_ANGLE));
     }
 
-    public async drive(direction: "forward"|"reverse", speed: number,) {
+    public async drive(direction: "forward"|"reverse", speed: number, durationMs: number) {
         const multiplier = (direction === "reverse" ? 1 : -1);
-        await this.devices.driveMotor.setSpeed(speed * multiplier, 500);
+        await this.devices.driveMotor.setSpeed(speed * multiplier, durationMs);
+    }
+
+    public async setSpeed(speed: number) {
+        // Invert, as 100 is usually backwards.
+        speed = speed * -1;
+        await this.devices.driveMotor.setPower(speed, true);
     }
 
     public async sleep(timeMs: number) {
