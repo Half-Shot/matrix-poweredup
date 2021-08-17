@@ -45,18 +45,18 @@ export const BotCommands: Record<BotCommandNames, BotCommandDefinition> = {
     },
     // Buggy commands
     buggy_turn: {
-        textualRegex: /^buggy turn (left|right) (\d+)?$/,
         eventType: "uk.half-shot.matrix-poweredup.buggy.turn",
+        textualRegex: /^buggy turn (left|right) (\d+)?$/,
         fromText: (groups) => ({ direction: groups[1], angle: groups[2] ?? parseInt(groups[2])}),
     },
     buggy_drive: {
-        textualRegex: /^buggy drive (forward|reverse) (\d+) (\d+)$/,
         eventType: "uk.half-shot.matrix-poweredup.buggy.drive",
+        textualRegex: /^buggy drive (forward|reverse) (\d+) (\d+)$/,
         fromText: (groups) => ({ direction: groups[1], power: groups[2] ?? parseInt(groups[2]), duration: groups[3] ?? parseInt(groups[3])}),
     },
     buggy_speed: {
-        textualRegex: /^buggy speed (-?\d+)$/,
         eventType: "uk.half-shot.matrix-poweredup.buggy.speed",
+        textualRegex: /^buggy speed (-?\d+)$/,
         fromText: (groups) => ({ speed: groups[1] ?? parseInt(groups[1])}),
     }
 };

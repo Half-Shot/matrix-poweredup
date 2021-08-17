@@ -14,7 +14,9 @@
   "dependencies": {
     "matrix-bot-sdk": "^0.5.19",
     "matrix-js-sdk": "^12.2.0",
-    "node-poweredup": "^6.11.0"
+    "node-poweredup": "^6.11.0",
+    "winston": "^3.3.3",
+    "yaml": "^1.10.2"
   },
   "devDependencies": {
     "@types/node": "^16.6.1",

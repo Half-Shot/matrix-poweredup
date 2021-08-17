@@ -1,0 +1,10 @@
+homeserver:
+  # The homeserver url
+  url: "http://localhost"
+  # The bot's access token
+  accessToken: "botAccessToken"
+  # Room the bot should try to join and take commands from
+  roomId: "!foo:bar"
+
+logging:
+  level: debug

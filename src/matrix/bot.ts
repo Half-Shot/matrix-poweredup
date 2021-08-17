@@ -36,7 +36,6 @@ export class MatrixBot extends EventEmitter {
             await this.onRoomMessage(roomId, eventData);
             return;
         }
-        console.log(`Got event ${event.eventId}`);
         const cmd = Object.entries(BotCommands).find(c => c[1].eventType === event.type);
         if (cmd) {
             this.emit("command", new CommandContext(cmd[0], cmd[1], this.client, event.content as Record<string, unknown>, event, roomId));

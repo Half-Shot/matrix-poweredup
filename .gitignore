@@ -3,3 +3,6 @@ lib/
 tsconfig.tsbuildinfo
 yarn-error.log
 client-data.json
+
+/*config.yaml
+/*config.yml
